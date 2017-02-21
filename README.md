@@ -17,12 +17,14 @@ You will find the following functions on both the front-end and back-end socket 
 #### `subscribe(callback[_Function_], actions[_String/Array_])`
 
 Adds a listener to the specified action(s). Callback function is called whenever a matching message is received. In the case that actions is undefined, the listener function will receive _all_ socket messages.
-<br>**@return** _Number_ the subscriber’s ID.
+
+**@return** _Number_ the subscriber’s ID.
 
 #### `unsubscribe(id[_Number_], actions[_String/Array_])`
 
 Removes the listener to the specified action(s). If no action is passed, the listener will be unsubscribed from all actions.
-<br>**@return** _Boolean_ success.
+
+**@return** _Boolean_ success.
 
 #### `publish(action[String], data)`
 
@@ -35,4 +37,4 @@ The front-end plugin registers itself to Notify, and thus can be accessed using 
 
 #### `isConnectionOpen()`
 
-<br>**@return** _Boolean_whether the client is connected to the socket server.
+**@return** _Boolean_whether the client is connected to the socket server.
