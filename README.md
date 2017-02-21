@@ -14,21 +14,17 @@ This is an Adapt **authoring tool plugin** which adds support for Web Sockets us
 
 You will find the following functions on both the front-end and back-end socket plugins.
 
-#### subscribe(callback[Function], actions[String/Array])
+#### `subscribe(callback[_Function_], actions[_String/Array_])`
 
-Adds a listener to the specified action(s). Callback function is called whenever a matching message is received.
+Adds a listener to the specified action(s). Callback function is called whenever a matching message is received. In the case that actions is undefined, the listener function will receive _all_ socket messages.
+<br>**@return** _Number_ the subscriber’s ID.
 
-In the case that actions is undefined, the listener function will receive _all_ socket messages.
-
-**returns** the subscriber’s ID[Number].
-
-#### unsubscribe(id[Number], actions[String/Array])
+#### `unsubscribe(id[_Number_], actions[_String/Array_])`
 
 Removes the listener to the specified action(s). If no action is passed, the listener will be unsubscribed from all actions.
+<br>**@return** _Boolean_ success.
 
-**returns** success[Boolean].
-
-#### publish(action[String], data)
+#### `publish(action[String], data)`
 
 Sends a message via the socket server.
 
@@ -37,6 +33,6 @@ Sends a message via the socket server.
 
 The front-end plugin registers itself to Notify, and thus can be accessed using `Origin.Notify.socket`.
 
-#### isConnectionOpen()
+#### `isConnectionOpen()`
 
-**return** whether the client is connected to the socket server [Boolean]
+<br>**@return** _Boolean_whether the client is connected to the socket server.
