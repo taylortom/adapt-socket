@@ -1,11 +1,11 @@
 // LICENCE https://github.com/adaptlearning/adapt_authoring/blob/master/LICENSE
-define(['require', 'coreJS/app/origin', 'underscore', '//cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js'], function(require, Origin, _, io) {
+define(['require', 'core/origin', 'underscore', '//cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js'], function(require, Origin, _, io) {
 	// Privates
 	var connection;
 	var subscribers = {};
 	var nextId = 1;
 
-	Origin.on('app:dataReady', function init() {
+	Origin.on('origin:dataReady', function init() {
 		Origin.Notify.register('socket', Socket);
 		connect();
 	});
