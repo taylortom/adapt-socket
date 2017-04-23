@@ -7,6 +7,7 @@ This is an Adapt **authoring tool plugin** which adds support for Web Sockets us
 1. Copy all sub-folders in `/routes/` to `/routes/` in your authoring tool folder.
 2. Copy all sub-folders in `/frontend/` to `/frontend/src/plugins/` in your authoring tool folder.
 3. Add the NPM dependencies in `dependencies.json` and run `npm install` to download them.
+4. Add `useSockets` to `config/conf.json`, and `configuration.js` to `ALLOWED_CLIENT_SITE_KEYS`.
 
 ## Usage
 
