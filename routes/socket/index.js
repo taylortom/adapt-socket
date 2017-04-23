@@ -1,5 +1,5 @@
 // needed for preloader
-var test = module.exports = require('express')();
+module.exports = require('express')();
 
 var async = require('async');
 var redis = require('socket.io-redis');
@@ -66,7 +66,9 @@ function init() {
   server.on('connection', onConnection);
 }
 
-init();
+if(origin.configuration.getConfig('useSockets')) {
+  init();
+}
 
 function addSubscriber(listener, actions) {
   var id = nextId++;
